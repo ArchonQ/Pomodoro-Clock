@@ -1,11 +1,13 @@
 import React from "react";
-
+import Break from "./components/Break";
+import Session from "./components/Session";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p id="break-label">Break</p>
+      <Break />
+      <Session />
     </div>
   );
 }
