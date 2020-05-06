@@ -1,7 +1,6 @@
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 
 momentDurationFormatSetup(moment);
 
