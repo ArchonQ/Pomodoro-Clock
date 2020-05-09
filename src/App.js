@@ -101,7 +101,7 @@ function App() {
         setTimeLeft(60 * 25);
     };
     return (
-        <div className="flex flex-col h-screen items-center justify-center bg-teal-400">
+        <div className="flex flex-col h-screen items-center justify-center bg-teal-500">
             <div className="flex w-full justify-around">
                 <Break
                     breakLength={breakLength}
