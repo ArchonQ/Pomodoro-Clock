@@ -18,6 +18,19 @@ function App() {
 		setTimeLeft(SessionLength);
 	}, [SessionLength]);
 
+	useEffect(() => {
+		if (timeLeft === 0) {
+			audioElement.current.play();
+			if (currentSessionType === "Session") {
+				setCurrentSessionType("Break");
+				setTimeLeft(breakLength);
+			} else if (currentSessionType === "Break") {
+				setCurrentSessionType("Session");
+				setTimeLeft(SessionLength);
+			}
+		}
+	}, [breakLength, currentSessionType, SessionLength, timeLeft]);
+
 	const decrementBreakLengthByOneMinute = () => {
 		const newBreakLength = breakLength - 60;
 		if (newBreakLength > 0) {
@@ -57,28 +70,7 @@ function App() {
 			//    decrement timeLeft by one every second (1000 ms)
 			//      to do this we'll use setInterval
 			const newIntervalId = setInterval(() => {
-				setTimeLeft((prevTimeLeft) => {
-					const newTimeLeft = prevTimeLeft - 1;
-					if (newTimeLeft >= 0) {
-						return newTimeLeft;
-					}
-					// time left is less than 0
-					audioElement.current.play();
-					// if session:
-					if (currentSessionType === "Session") {
-						// switch to break
-						setCurrentSessionType("Break");
-						// setTimeLeft to breakLength
-						return breakLength;
-					}
-					// if break:
-					else if (currentSessionType === "Break") {
-						// switch to session
-						setCurrentSessionType("Session");
-						// setTimeLeft to sessionLength
-						return SessionLength;
-					}
-				});
+				setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
 			}, 100);
 			setIntervalId(newIntervalId);
 		}
