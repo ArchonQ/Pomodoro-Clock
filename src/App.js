@@ -109,6 +109,7 @@ function App() {
 					decrementBreakLengthByOneMinute={decrementBreakLengthByOneMinute}
 				/>
 				<TimeLeft
+					handleResetButtonClick={handleResetButtonClick}
 					handleStartStopClick={handleStartStopClick}
 					timerLabel={currentSessionType}
 					startStopButtonLabel={isStarted ? "Stop" : "Start"}
@@ -120,9 +121,7 @@ function App() {
 					incrementSessionLengthByOneMinute={incrementSessionLengthByOneMinute}
 				/>
 			</div>
-			<button id="reset" onClick={handleResetButtonClick}>
-				Reset
-			</button>
+
 			<audio id="beep" ref={audioElement}>
 				<source
 					src="https://onlineclock.net/audio/options/default.mp3"

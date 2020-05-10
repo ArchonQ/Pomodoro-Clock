@@ -4,6 +4,8 @@ import {
 	BreakSessionContainer,
 	BreakSessionLabel,
 	BreakSessionTime,
+	PlusMinusButtonContainer,
+	PlusMinusButton,
 } from "../ui/BreakSessionUI";
 
 const Break = ({
@@ -18,12 +20,20 @@ const Break = ({
 			<BreakSessionTime id="break-length">
 				{breakLengthInMinutes}
 			</BreakSessionTime>
-			<button id="break-decrement" onClick={decrementBreakLengthByOneMinute}>
-				-
-			</button>
-			<button id="break-increment" onClick={incrementBreakLengthByOneMinute}>
-				+
-			</button>
+			<PlusMinusButtonContainer>
+				<PlusMinusButton
+					id="break-decrement"
+					onClick={decrementBreakLengthByOneMinute}
+				>
+					-
+				</PlusMinusButton>
+				<PlusMinusButton
+					id="break-increment"
+					onClick={incrementBreakLengthByOneMinute}
+				>
+					+
+				</PlusMinusButton>
+			</PlusMinusButtonContainer>
 		</BreakSessionContainer>
 	);
 };

@@ -6036,6 +6036,10 @@ video {
   clear: none;
 }
 
+.font-clock {
+  font-family: Orbitron;
+}
+
 .font-sans {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -19772,6 +19776,10 @@ video {
 
   .sm\:clear-none {
     clear: none;
+  }
+
+  .sm\:font-clock {
+    font-family: Orbitron;
   }
 
   .sm\:font-sans {
@@ -33513,6 +33521,10 @@ video {
     clear: none;
   }
 
+  .md\:font-clock {
+    font-family: Orbitron;
+  }
+
   .md\:font-sans {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -47252,6 +47264,10 @@ video {
     clear: none;
   }
 
+  .lg\:font-clock {
+    font-family: Orbitron;
+  }
+
   .lg\:font-sans {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -60989,6 +61005,10 @@ video {
 
   .xl\:clear-none {
     clear: none;
+  }
+
+  .xl\:font-clock {
+    font-family: Orbitron;
   }
 
   .xl\:font-sans {

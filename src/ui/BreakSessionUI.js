@@ -23,3 +23,22 @@ export const BreakSessionTime = ({ children, ...props }) => {
 		</p>
 	);
 };
+
+export const PlusMinusButton = ({ children, ...props }) => {
+	return (
+		<button
+			className="mt-2 text-lg text-gray-800 px-4 py-2 bg-green-200 rounded"
+			{...props}
+		>
+			{children}
+		</button>
+	);
+};
+
+export const PlusMinusButtonContainer = ({ children, ...props }) => {
+	return (
+		<div className="grid grid-flow-col gap-2 rounded" {...props}>
+			{children}
+		</div>
+	);
+};
