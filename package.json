@@ -13,7 +13,6 @@
 		"react-scripts": "3.4.1"
 	},
 	"scripts": {
-		"deploy": "gh-pages -d build",
 		"start": "yarn run watch:css && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
